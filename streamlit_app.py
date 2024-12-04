@@ -137,7 +137,7 @@ d = d.strftime("%Y-%m-%d")
 prediction_on_day = round(forecast["yhat"].values[forecast["ds"][forecast["ds"] == d].index][0], 2)
 
 
-sentence = f'PPPredicted number of disruption in {selected_province} on {d} is {prediction_on_day}'
+sentence = f'Predicted number of disruption in {selected_province} on {d} is {prediction_on_day}'
 ''
 sentence
 
