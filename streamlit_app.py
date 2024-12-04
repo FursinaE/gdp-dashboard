@@ -23,7 +23,7 @@ def get_gdp_data():
 
     # Instead of a CSV on disk, you could read from an HTTP endpoint here too.
     DATA_FILENAME = Path(__file__).parent/'data/gdp_data.csv'
-    raw_gdp_df = pd.read_csv('/workspaces/gdp-dashboard/df_streamlit.csv')
+    raw_gdp_df = pd.read_csv('df_streamlit.csv')
 
     #MIN_YEAR = 1960
     #MAX_YEAR = 2022
