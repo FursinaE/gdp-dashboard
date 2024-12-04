@@ -70,7 +70,7 @@ Using NS data we try to predict number of disruptions which might potencially ha
 # Add some spacing
 ''
 ''
-calender_2024 = pd.read_csv('/workspaces/gdp-dashboard/Calender_2024.csv')
+calender_2024 = pd.read_csv('Calender_2024.csv')
 
 calender_2024['date_date'] = pd.to_datetime(calender_2024['date_date'])
 calender_2024['date_date'] = calender_2024['date_date'].dt.date
