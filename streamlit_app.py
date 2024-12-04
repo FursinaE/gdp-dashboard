@@ -128,7 +128,7 @@ forecast = m.predict(future)
 fig1 = m.plot(forecast)
 
 
-#st.fig1
+st.write(fig1)
 
 
 d = pd.to_datetime(d)
