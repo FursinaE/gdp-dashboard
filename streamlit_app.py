@@ -88,7 +88,7 @@ st.write('Selected date is:', d)
 
 
 
-provinces = gdp_df['NUTS_1_0'].unique()
+provinces = gdp_df['NUTS_2_0'].unique()
 
 if not len(provinces):
     st.warning("Select at least one province!")
@@ -96,14 +96,15 @@ if not len(provinces):
 selected_province = st.multiselect(
     'Which province would you like to check?',
     provinces,
-    ['Zuid-Nederland', 'West-Nederland', 'Oost-Nederland',
-       'Noord-Nederland'])
+    ['Noord-Brabant', 'Utrecht', 'Gelderland', 'Groningen',
+    'Limburg (NL)', 'Drenthe', 'Overijssel', 'Friesland (NL)',
+       'Noord-Holland', 'Zuid-Holland', 'Zeeland', 'Flevoland'])
 
 ''
 
 # Filter the data
 filtered_gdp_df = gdp_df[
-    (gdp_df['NUTS_1_0'].isin(selected_province))
+    (gdp_df['NUTS_2_0'].isin(selected_province))
    # & (gdp_df['Year'] <= to_year)
     # & (from_year <= gdp_df['Year'])
 ]
